@@ -5,6 +5,7 @@ import sawir from "../../assets/sawir.png";
 import sawir2 from "../../assets/mpapp.png"; 
 import sawir3 from "../../assets/laenpage.png"; 
 import  sawir4 from "../../assets/myprofile.png";
+import { Cloud, Code2, Database } from "lucide-react";
 
 const Home = () => {
   const projects = [
@@ -28,6 +29,27 @@ const Home = () => {
       description: "Dashboard iyo landing page loogu talagalay ardayda, lehna nidaam login iyo course tracking.",
       image: sawir3, // Waxay isticmaalaysaa laenpage.png
       tags: ["TypeScript", "React", "Node.js"]
+    },
+    
+  ];
+  const skillCategories = [
+    {
+      title: "Web Development",
+      icon: <Code2 className="w-8 h-8 text-blue-500" />,
+      skills: ["React", "TypeScript", "Tailwind CSS"],
+      color: "border-blue-500/20"
+    },
+    {
+      title: "Data Analytics",
+      icon: <Database className="w-8 h-8 text-green-500" />,
+      skills: ["Excel Formulas", "Pivot Tables", "Dashboards"],
+      color: "border-green-500/20"
+    },
+    {
+      title: "Cloud Computing",
+      icon: <Cloud className="w-8 h-8 text-orange-500" />,
+      skills: ["AWS Cloud Essentials", "Cloud Concepts", "Infrastructure"],
+      color: "border-orange-500/20"
     }
   ];
 
@@ -168,13 +190,40 @@ to create beautiful and easy-to-use interfaces.
           </div>
         </div>
       </section>
+        <section className="py-12 bg-[#080810]">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10 text-white">Xirfadahayga (My Skills)</h2>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <div 
+              key={index} 
+              className={`p-6 bg-white/5 rounded-xl border-2 ${category.color} shadow-sm hover:shadow-md transition-shadow`}
+            >
+              <div className="mb-4">{category.icon}</div>
+              <h3 className="text-xl font-semibold mb-4 text-white">{category.title}</h3>
+              <ul className="space-y-2">
+                {category.skills.map((skill, idx) => (
+                  <li key={idx} className="flex items-center text-gray-400">
+                    <span className="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* DATA ANALYSIS & TOOLS SECTION */}
       <section className="py-20 px-6 bg-[#0a0a15]">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-            <div>
-              <h2 className="text-4xl font-bold mb-2">Data & Office Expertise</h2>
+            <div >
+              <h2 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500  ">
+                Data & Office Expertise
+              </h2>
               <p className="text-gray-400">High-level data and document management skills</p>
             </div>
           </div>
