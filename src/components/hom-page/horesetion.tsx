@@ -5,7 +5,7 @@ import sawir from "../../assets/sawir.png";
 import sawir2 from "../../assets/mpapp.png"; 
 import sawir3 from "../../assets/laenpage.png"; 
 import  sawir4 from "../../assets/myprofile.png";
-import { Cloud, Code2, Database } from "lucide-react";
+import {  Code2, Database } from "lucide-react";
 
 const Home = () => {
   const projects = [
@@ -45,12 +45,7 @@ const Home = () => {
       skills: ["Excel Formulas", "Pivot Tables", "Dashboards"],
       color: "border-green-500/20"
     },
-    {
-      title: "Cloud Computing",
-      icon: <Cloud className="w-8 h-8 text-orange-500" />,
-      skills: ["AWS Cloud Essentials", "Cloud Concepts", "Infrastructure"],
-      color: "border-orange-500/20"
-    }
+  
   ];
 
   return (
