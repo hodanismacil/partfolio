@@ -52,82 +52,112 @@ const Home = () => {
     <div className="bg-[#050508] text-white font-sans selection:bg-purple-500/30">
       
       {/* HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden px-6">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/20 blur-[120px] rounded-full" />
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-center"
-        >
-          <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-purple-400 mb-6 inline-block">
-            Available for new projects
-          </span>
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight">
-            Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400">Hodan</span> 👋
-          </h1>
-          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Frontend Developer | React Enthusiast | UI/UX Focused
-            I build modern, responsive, and user-friendly web applications, focused on improving user experience and clean design.
-          </p>
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 lg:px-16 py-20">
+  {/* Light effect background */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none" />
+  
+  <div className="relative z-10 max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    {/* QAYBTA QORAALKA (LEFT SIDE) */}
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center md:text-left flex flex-col items-center md:items-start"
+    >
+      <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-purple-400 mb-6 inline-block">
+        Available for new projects
+      </span>
+      <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-none">
+        Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400">Hodan</span> 👋
+      </h1>
+      <p className="text-gray-400 text-base md:text-lg max-w-xl mb-10 leading-relaxed">
+        Frontend Developer | React Enthusiast | UI/UX Focused <br className="hidden md:inline" />
+        I build modern, responsive, and user-friendly web applications, focused on improving user experience and clean design.
+      </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-2xl font-semibold hover:shadow-[0_0_20px_rgba(147,51,234,0.5)] transition-all active:scale-95">
-              View My Work
-            </button>
-            <button className="px-8 py-4 rounded-2xl font-semibold border border-white/10 hover:bg-white/5 transition-all">
-              Contact Me
-            </button>
-          </div>
-        </motion.div>
-      </section>
+      <div className="flex flex-wrap justify-center md:justify-start gap-4 w-full">
+        <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-2xl font-semibold hover:shadow-[0_0_20px_rgba(147,51,234,0.5)] transition-all active:scale-95">
+          View My Work
+        </button>
+        <button className="px-8 py-4 rounded-2xl font-semibold border border-white/10 hover:bg-white/5 transition-all active:scale-95">
+          Contact Me
+        </button>
+      </div>
+    </motion.div>
 
-      {/* ABOUT SECTION */}
-      <section className="py-32 px-6 bg-[#080810]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold mb-8">The work I do</h2>
-            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              I am a Frontend Developer who loves building modern websites.
-I specialize in using **React**, **TypeScript**, and **Tailwind CSS**
-to create beautiful and easy-to-use interfaces.
-            </p>
-            <div className="space-y-4 border-l-2 border-purple-500/30 pl-6">
-              <div className="flex items-center gap-3 text-gray-300">
-                <span className="text-purple-400">📧</span> hodanismacil256@gmail.com
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <span className="text-blue-400">📱</span> +252 0636409413
-              </div>
-            </div>
-          </motion.div>
+    {/* QAYBTA SAWIRKA (RIGHT SIDE) */}
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="flex justify-center items-center"
+    >
+      <motion.div
+  initial={{ opacity: 0, x: 30 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="flex justify-center items-center"
 
-          <motion.div
-  className="relative"
-  initial={{ opacity: 0, scale: 0.9, y: 50 }}
-  whileInView={{ opacity: 1, scale: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  viewport={{ once: true }}
 >
-  <div className="absolute -inset-4 bg-gradient-to-tr from-purple-500 to-blue-500 opacity-20 blur-2xl rounded-3xl" />
-
-  <div className="relative bg-white/5 p-4 md:p-6 rounded-3xl border border-white/10 shadow-2xl">
+  {/* Ka saar border-ka iyo bg-gradient-ka halkan */}
+  <div className="relative group p-0 rounded-3xl pointer-events-none">
     <img
-      src={sawir4}
+      src={sawir4} // Sawirka PNG-ga ah ee background la'aanta ah
       alt="Hodan"
-      className="w-full h-[400px] object-cover rounded hover:scale-105 hover:rotate-1 transition duration-500"
-      
+      className="w-72 h-72 md:w-96 md:h-96 object-cover" // Ka saar rounded-2xl
     />
+    {/* Ka saar glow-ga hoose */}
   </div>
 </motion.div>
-        </div>
-      </section>
+    </motion.div>
+
+  </div>
+</section>
+
+    <section className="py-32 px-6 bg-[#050508] text-white font-sans selection:bg-purple-500/30 relative overflow-hidden flex items-center justify-center min-h-[70vh]">
+  {/* Qurxin background ah (Nuurka dambe) */}
+  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none" />
+  
+  <div className="max-w-3xl mx-auto text-center relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col items-center"
+    >
+      {/* Cinwaanka weyn ee casriga ah */}
+      <h2 className="text-4xl md:text-6xl font-extrabold uppercase tracking-tight leading-tight mb-8 text-white">
+        The work <span className="text-[#00e676]">I do</span>
+      </h2>
+      
+      {/* Qoraalka sharrahaadda oo la naqshadeeyay */}
+      <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+        I am a <span className="text-[#00e676] font-semibold">Frontend Developer</span> who loves building modern websites. 
+        I specialize in using <strong className="text-white font-bold">React</strong>, 
+        <strong className="text-white font-bold"> TypeScript</strong>, and 
+        <strong className="text-white font-bold"> Tailwind CSS</strong> to create beautiful and easy-to-use interfaces.
+      </p>
+
+      {/* Macluumaadka Xiriirka oo loo naqshadeeyay qaab Badhamo (Buttons) oo kale ah */}
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+        <a 
+          href="mailto:hodanismacil256@gmail.com"
+          className="flex items-center justify-center gap-3 w-full sm:w-auto bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-white/10 px-6 py-3 rounded-xl text-gray-300 hover:text-white transition-all duration-300"
+        >
+          <span className="text-purple-400">📧</span> hodanismacil256@gmail.com
+        </a>
+        <a 
+          href="tel:+2520636409413"
+          className="flex items-center justify-center gap-3 w-full sm:w-auto bg-white/5 border border-white/10 hover:border-blue-500/50 hover:bg-white/10 px-6 py-3 rounded-xl text-gray-300 hover:text-white transition-all duration-300"
+        >
+          <span className="text-blue-400">📱</span> +252 0636409413
+        </a>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       {/* PROJECTS SECTION */}
       <section className="py-32 px-6">
